@@ -1,16 +1,40 @@
-# ybt_admin
+# Yangon Bus Tracking System - Admin Panel 
 
-Admin Panel for Yangon Bus Tracking System.
 
 ## Getting Started
+### Prerequisites
+Ensure you have the following installed:
+- Flutter SDK
+- Dart
+- Android Studio or Visual Studio Code / XCode
 
-This project is a starting point for a Flutter application.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/walkmandede/ybt-driver.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd ybt-driver
+   ```
+3. Install dependencies:
+   ```bash
+   flutter pub get
+   ```
 
-A few resources to get you started if this is your first Flutter project:
+### Running the App
+- To run the app on an emulator or device:
+  ```bash
+  flutter run
+  ```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Dependencies
+Key dependencies used in the project:
+- `get` for state management
+- `http` for API requests
+
+
+## Contact
+For issues or inquiries, please reach out via [GitHub Issues](https://github.com/walkmandede/ybt-driver/issues).
+
