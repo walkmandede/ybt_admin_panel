@@ -11,11 +11,11 @@ Ensure you have the following installed:
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/walkmandede/ybt-driver.git
+   git clone https://github.com/walkmandede/ybt_admin_panel
    ```
 2. Navigate to the project directory:
    ```bash
-   cd ybt-driver
+   cd ybt_admin_panel
    ```
 3. Install dependencies:
    ```bash
