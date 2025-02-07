@@ -35,7 +35,7 @@ class DashboardDrawer extends StatelessWidget {
                           AppSvgs.routeIcon,
                           "Routes",
                           () {
-                            Get.toNamed(RouteNames.busListPage);
+                            Get.toNamed(RouteNames.routePgae);
                           }
                         ],
                         [

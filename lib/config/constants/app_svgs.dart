@@ -49,4 +49,7 @@ class AppSvgs {
   <path d="M9 12h12l-3 -3"></path>
   <path d="M18 15l3 -3"></path>
 </svg>""";
+
+  static var busPinIcon =
+      """<?xml version="1.0" ?><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><g id="Flat"><g id="Color"><ellipse cx="32" cy="53.5" fill="#fccd1d" rx="29" ry="7.5"/><ellipse cx="32" cy="53.5" fill="#f9a215" rx="20" ry="3.5"/><path d="M54,25A22,22,0,1,0,22.86,45l7.82,7.84a2,2,0,0,0,2.64,0L41.14,45A22,22,0,0,0,54,25Z" fill="#dd051d"/><circle cx="32" cy="25" fill="#fff" r="18"/><path d="M25,34h4a0,0,0,0,1,0,0v1.27A1.73,1.73,0,0,1,27.27,37h-.54A1.73,1.73,0,0,1,25,35.27V34A0,0,0,0,1,25,34Z" fill="#111315"/><path d="M35,34h4a0,0,0,0,1,0,0v1.27A1.73,1.73,0,0,1,37.27,37h-.54A1.73,1.73,0,0,1,35,35.27V34A0,0,0,0,1,35,34Z" fill="#111315"/><rect fill="#212529" height="21" rx="2.05" width="18" x="23" y="13"/><path d="M41,19h2a1,1,0,0,1,1,1v3a1,1,0,0,1-1,1H41a0,0,0,0,1,0,0V19A0,0,0,0,1,41,19Z" fill="#fccd1d"/><path d="M21,19h2a0,0,0,0,1,0,0v5a0,0,0,0,1,0,0H21a1,1,0,0,1-1-1V20A1,1,0,0,1,21,19Z" fill="#fccd1d"/><rect fill="#e6e7e8" height="7" width="18" x="23" y="18"/><circle cx="27" cy="30" fill="#e6e7e8" r="1"/><circle cx="37" cy="30" fill="#e6e7e8" r="1"/></g></g></svg>""";
 }

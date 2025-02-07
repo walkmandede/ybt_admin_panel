@@ -63,7 +63,7 @@ class ApiRepoController extends GetxController {
     return result;
   }
 
-  Future<void> postUpateMe() async {
+  Future<void> postUpdateMe() async {
     try {
       final result = await ApiServiceController().makeARequest(
           apiRequestData: ApiRequestModel(
@@ -215,6 +215,27 @@ class ApiRepoController extends GetxController {
             enumApiRequestMethods: EnumApiRequestMethods.delete,
             url: "${ApiEndPoints.deleteABus}/$busVehicleId",
           ),
+          xNeedToken: true);
+    } catch (e) {
+      superPrint(e, title: "API Patch bus");
+    }
+    return result;
+  }
+
+  Future<ApiResponseModel> patchUpdateBusLineBusStops({
+    required List<BusStopModel> stops,
+  }) async {
+    ApiResponseModel result = ApiResponseModel.getInstance();
+    try {
+      final payLoad = {
+        "busStopIds": stops.map((e) => e.id).toList(),
+      };
+      superPrint(payLoad);
+      result = await ApiServiceController().makeARequest(
+          apiRequestData: ApiRequestModel(
+              enumApiRequestMethods: EnumApiRequestMethods.patch,
+              url: ApiEndPoints.patchUpdateBusLineStops,
+              data: payLoad),
           xNeedToken: true);
     } catch (e) {
       superPrint(e, title: "API Patch bus");

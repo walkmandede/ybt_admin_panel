@@ -9,7 +9,7 @@ import 'package:ybt_admin/src/controllers/app_data_controller.dart';
 import 'api_request_model.dart';
 
 class ApiServiceController extends GetxController {
-  static String baseUrl = "http://127.0.0.1:2345/api";
+  static String baseUrl = "https://ybt-backend-flask.onrender.com/api";
 
   static String getNetworkImage({required String path}) {
     return baseUrl + path;

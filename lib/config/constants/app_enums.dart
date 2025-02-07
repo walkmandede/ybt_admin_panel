@@ -1,6 +1,6 @@
 enum EnumBusServiceStatus {
-  on(label: "on"),
-  off(label: "off"),
+  on(label: "ON"),
+  off(label: "OFF"),
   ;
 
   final String label;

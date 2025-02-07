@@ -7,4 +7,5 @@ class RouteNames {
   static const String busListPage = "/buses/list";
   static const String createADriverPage = "/bus-drivers/create";
   static const String driverListPage = "/bus-drivers/list";
+  static const String routePgae = "/route";
 }

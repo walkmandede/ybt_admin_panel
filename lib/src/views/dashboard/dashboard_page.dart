@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ybt_admin/config/constants/app_functions.dart';
+import 'package:ybt_admin/config/constants/app_svgs.dart';
+import 'package:ybt_admin/config/route/route_names.dart';
 import 'package:ybt_admin/core/api/api_repo.dart';
 import 'package:ybt_admin/src/controllers/app_data_controller.dart';
 import 'package:ybt_admin/src/views/dashboard/dashboard_drawer.dart';
@@ -36,7 +38,7 @@ class _DashboardPageState extends State<DashboardPage> {
       superPrint(appDataController.apiToken);
       await Future.value([
         apiRepoController.getUpdateBusStops(),
-        apiRepoController.postUpateMe(),
+        apiRepoController.postUpdateMe(),
       ]);
     } catch (e) {
       superPrint(e, title: "Dashboard Init Load");
@@ -56,7 +58,62 @@ class _DashboardPageState extends State<DashboardPage> {
         ),
         centerTitle: false,
       ),
-      endDrawer: const DashboardDrawer(),
+      body: SizedBox.expand(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            ...[
+              [
+                AppSvgs.routeIcon,
+                "Routes",
+                () {
+                  Get.toNamed(RouteNames.routePgae);
+                }
+              ],
+              [
+                AppSvgs.busIcon,
+                "Buses",
+                () {
+                  Get.toNamed(RouteNames.busListPage);
+                }
+              ],
+              [
+                AppSvgs.driverIcon,
+                "Drivers",
+                () {
+                  Get.toNamed(RouteNames.driverListPage);
+                }
+              ],
+              [
+                AppSvgs.logout,
+                "LogOut",
+                () {
+                  Get.offAllNamed(RouteNames.loginPage);
+                }
+              ],
+            ].map((each) {
+              String svgIcon = each[0].toString();
+              String label = each[1].toString();
+              Function() function = each[2] as Function();
+              return ListTile(
+                onTap: () {
+                  function();
+                },
+                leading: AppFunctions.getSvgIcon(
+                    svgData: svgIcon,
+                    color: Theme.of(context).colorScheme.onPrimary),
+                title: Text(
+                  label,
+                  style:
+                      TextStyle(color: Theme.of(context).colorScheme.onPrimary),
+                ),
+              );
+            })
+          ],
+        ),
+      ),
+      // endDrawer: const DashboardDrawer(),
     );
   }
 }

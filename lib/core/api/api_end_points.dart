@@ -14,5 +14,6 @@ class ApiEndPoints {
   static const String postCreateADriver = "/bus-driver";
   static const String patchUpdateABus = "/bus-vehicle";
   static const String deleteABus = "/bus-vehicle";
+  static const String patchUpdateBusLineStops = "/bus-line/update-stops";
   static const String temp = "/____";
 }
